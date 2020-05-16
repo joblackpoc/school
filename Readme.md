@@ -69,10 +69,10 @@
 <br>{% extends 'school/base.html' %}
 <br>{% block content %}
 <br>    <div class="container">
-<br>        <h1>
+<br>       
 <br>            Welcome to Admin Chumphon
-<br>        </h1>
-<br>        <p>We are Better</p>
+<br>       
+<br>        <p>We are getting Better</p>
 <br>    </div>
 <br>{% endblock content %}
 # views.py
