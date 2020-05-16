@@ -36,5 +36,94 @@
 - 4.1 pip install --upgrade pip
 - 4.2 pip install --upgrade (package name)
 
+# virtualenv venv
+- virtualenv venv
+- .\venv\scripts\activate
 
-# django-admin startproject mysite
+- pip install django==3.0
+- pip install pylint
+- pip install wheel
+- pip install django-crispy-forms
+- pip install bootstrap4
+- pip install beautifulsoup4
+- pip install request
+- pip install pillow
+
+# django-admin startproject djangoproject
+# python manage.py startapp school
+
+- python manage.py runserver
+
+# settings.py
+<br> INSTALLED_APPS = [
+<br>    'school',
+<br> TEMPLATES = [
+<br>    {
+<br>        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<br>        'DIRS': [os.path.join(BASE_DIR, 'school/template')],
+
+# create folder Template under school app
+# create folder school under template
+# create file home.html
+
+# views.py
+<br>from django.shortcuts import render
+<br>
+<br>def HomePage(request):
+<br>    return render(request, 'school/home.html')
+	
+# djangoproject urls.py
+<br>
+<br>from django.contrib import admin
+<br>from django.urls import path, include
+<br>
+<br>urlpatterns = [
+<br>    path('admin/', admin.site.urls),
+<br>    path('', include('school.urls')),
+<br>]
+
+# school urls.py
+<br>from django.urls import path
+<br>from .views import HomePage
+<br>
+<br>urlpatterns = [
+<br>    path('', HomePage, name='home-page'),
+<br>]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
