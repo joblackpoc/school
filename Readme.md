@@ -65,7 +65,16 @@
 # create folder Template under school app
 # create folder school under template
 # create file home.html
-
+# home.html
+<br>{% extends 'school/base.html' %}
+<br>{% block content %}
+<br>    <div class="container">
+<br>        <h1>
+<br>            Welcome to Admin Chumphon
+<br>        </h1>
+<br>        <p>We are Better</p>
+<br>    </div>
+<br>{% endblock content %}
 # views.py
 <br>from django.shortcuts import render
 <br>
